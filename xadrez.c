@@ -8,14 +8,88 @@ int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    int bispo = 1;
+    int torre = 1;
+    int rainha = 1;
+    int selecao;
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    do
+    {
+        //menu interativo
+        printf("----------XADREZ----------\n");
+        printf("*Peças de xadrez*\n");
+        printf("\n");
+        printf("1- Bispo\n");
+        printf("2- Torre\n");
+        printf("3- Rainha\n");
+        printf("\n");
+        printf("Selecione a peça que você deseja movimentar: ");
+        scanf("%d", &selecao);
+        printf("\n");
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+        //switch para seleção da peça
+        switch (selecao)
+        {
+        case 1:
+            // Implementação de Movimentação do Bispo
+            // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+            printf("---Bispo--- \n");
+            printf("\n");
+            printf("*Você está movimentando o Bispo*\n");
+            printf("Movimentação na diagonal.\n");
+            printf("\n");
+            while (bispo <= 5){
+                printf("%d casa(as) para direita cima(diagonal).\n", bispo);
+                printf("\n");
+                bispo++;
+            }
+            printf("----------Fim do programa----------\n");
+        break;
+
+        case 2:
+        // Implementação de Movimentação da Torre
+        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+
+            printf("---Torre--- \n");
+            printf("\n");
+            printf("*Você está movimentando a Torre*\n");
+            printf("Movimentação para a direita.\n");
+            printf("\n");
+            while (torre <= 5)
+            {
+                printf("%d casa(as) para direita.\n", torre);
+                printf("\n");
+                torre++;
+            }
+            printf("----------Fim do programa----------\n");
+        break;
+
+        case 3:
+            // Implementação de Movimentação da Rainha
+            // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+
+            printf("---Rainha--- \n");
+            printf("\n");
+            printf("*Você está movimentando a Rainha*\n");
+            printf("Movimentação para a esquerda.\n");
+            printf("\n");
+            while (rainha <= 8)
+            {
+                printf("%d casa(as) para a esquerda.\n", rainha);
+                printf("\n");
+                rainha++;
+            }
+            printf("----------Fim do programa----------\n");
+        break;
+        
+        default:
+            printf("Opção inválida, tente novamente.\n");
+            printf("\n");
+        break;
+        }
+    } while (selecao < 1 || selecao > 3);
+    //verificando o o número digitado correspondem aos cases do switch
+    
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
