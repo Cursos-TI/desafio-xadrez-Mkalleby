@@ -36,10 +36,12 @@ int main() {
             printf("---Bispo--- \n");
             printf("\n");
             printf("*Você está movimentando o Bispo*\n");
-            printf("Movimentação na diagonal.\n");
+            printf("Você poderá movimentar o bispo em até 5 casas para a diagonal.\n");
             printf("\n");
             while (bispo <= 5){
-                printf("%d casa(as) para direita cima(diagonal).\n", bispo);
+                printf("Movimentando %d casa(as) para direita e %d para cima(diagonal).\n", bispo, bispo);
+                printf("%d / 5 casas movidas para a diagonal.\n", bispo);
+                printf("Total de casas movidas: %d\n", bispo + bispo);
                 printf("\n");
                 bispo++;
             }
@@ -53,11 +55,12 @@ int main() {
             printf("---Torre--- \n");
             printf("\n");
             printf("*Você está movimentando a Torre*\n");
-            printf("Movimentação para a direita.\n");
+            printf("Você poderá movimentar a torre em até 5 casas para a direita.\n");
             printf("\n");
             while (torre <= 5)
             {
-                printf("%d casa(as) para direita.\n", torre);
+                printf("Movimentando %d casa(as) para direita.\n", torre);
+                printf("%d / 5 casas movidas para a direita.\n", torre);
                 printf("\n");
                 torre++;
             }
@@ -71,11 +74,12 @@ int main() {
             printf("---Rainha--- \n");
             printf("\n");
             printf("*Você está movimentando a Rainha*\n");
-            printf("Movimentação para a esquerda.\n");
+            printf("Você poderá movimentar a rainha em até 8 casas para a esquerda.\n");
             printf("\n");
             while (rainha <= 8)
             {
-                printf("%d casa(as) para a esquerda.\n", rainha);
+                printf("Movimentando %d casa(as) para esquerda.\n", rainha);
+                printf("%d / 8 casas movidas para a esquerda.\n", rainha);
                 printf("\n");
                 rainha++;
             }
