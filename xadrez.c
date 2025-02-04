@@ -11,8 +11,8 @@ int main() {
     int bispo = 1;
     int torre = 1;
     int rainha = 1;
-    int cavalo_vertical;
-    int cavalo_horizontal;
+    int cavalo_esquerda;
+    int cavalo_baixo = 0;
     int selecao;
 
     do
@@ -97,21 +97,24 @@ int main() {
             printf("*Você está movimentando o cavalo*\n");
             printf("Você poderá movimentar cavalo em formato de L.\n");
             printf("\n");
-            for (cavalo_vertical = 1; cavalo_vertical < 2; cavalo_vertical++)
+            for (cavalo_esquerda = 1; cavalo_esquerda < 2; cavalo_esquerda++)
             {
-                printf("*Horizontal*\n");
+                printf("*Baixo*\n");
                 printf("\n");
-                for (cavalo_horizontal = 0; cavalo_horizontal < 2; cavalo_horizontal++)
+
+                while (cavalo_baixo < 2)
                 {
-                   printf("Movimentando %dª casa para a horizontal (em L).\n", cavalo_horizontal + 1);
-                   printf("%d / 2 casas movidas para a horizontal.\n", cavalo_horizontal + 1);
+                    printf("Movimentando %dª casa para baixo (em L).\n", cavalo_baixo + 1);
+                    printf("%d / 2 casas movidas para a baixo.\n", cavalo_baixo + 1);
+                    cavalo_baixo++;
                 }
+                
                 printf("\n");
-                printf("*Vertical*\n");
-                printf("Movimentando %dª casa para a vertical (em L).\n", cavalo_vertical);
-                printf("%d / 1 casas movidas para a vertical.\n", cavalo_vertical);
+                printf("*Esquerda*\n");
+                printf("Movimentando %dª casa para a esquerda (em L).\n", cavalo_esquerda);
+                printf("%d / 1 casas movidas para a esquerda.\n", cavalo_esquerda);
                 printf("\n");
-                printf("Total de casas movidas: %d", cavalo_vertical + cavalo_horizontal);
+                printf("Total de casas movidas: %d", cavalo_baixo + cavalo_esquerda);
                 printf("\n");
             }
             
